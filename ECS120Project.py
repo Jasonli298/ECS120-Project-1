@@ -18,6 +18,7 @@ def ndFactor(inString, K):
     for L in numList:
         t = Thread(target = findFactor, args = (L, num, ndSoln))
         threads.append(t)
+
     solution = utils.waitForOnePosOrAllNeg(threads, ndSoln)
     return solution
     
@@ -25,9 +26,10 @@ def findFactor(L, num, ndSoln):
     for i in L:
         if num % i == 0:
             ndSoln.setSolution(i)
-    
+
 def main():
     number = input("Enter a positive integer: ")
-    print("One of the factors of the number you entered is:", ndFactor(number, 10))
+    K = int(input("How many groups do you want to split the numbers into? ")) 
+    print("One of the factors of the number you entered is:", ndFactor(number, K))
 
 main()
