@@ -3,7 +3,7 @@
 I attempetd to write a nondeterministic python program that
 solves the factoring problem. I referenced the `containsNANA()` function in the book, and modified the program a little to suit the task more.
 
-First, I calculated the square root of the number `num` entered, since I only need to check the numbers ranging from 2 to $sqrt{num}$, and the rest of the factors can be easily obtained by dividing `num` by the factors found. 
+First, I calculated the square root of the number `num` entered, since I only need to check the numbers ranging from 2 to $\sqrt{num}$, and the rest of the factors can be easily obtained by dividing `num` by the factors found. 
 
 Then I used the `array_split()` function in the imported `numpy` module to split `num` into *K* groups.
 ```python
