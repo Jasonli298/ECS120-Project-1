@@ -13,7 +13,7 @@ for L in numList:
 ```
 This block creates a thread for each of the *K* groups, and appends it to the `threads` list. Then I used the `waitForOnePosOrAllNeg()` function in the `utils` module to start the threads. Then I return the `solution` that contains one of the factors of `num` as a string.
 
-The `findFactor()` function first iterates through one of the arrrays we obtained by ```array_split()`
+The `findFactor()` function first iterates through one of the arrrays we obtained by `array_split()`
 ```python
 for i in L:
     if num % i == 0: #determines if i divides num
