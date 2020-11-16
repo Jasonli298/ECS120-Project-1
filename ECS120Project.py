@@ -7,8 +7,8 @@ import utils
 import math
 import numpy
 
-def ndFactor(inString, K):
-    num = int(inString)
+def ndFactor(inNum, K):
+    num = int(inNum)
     numRt = int(math.sqrt(num))
     
     threads = []
