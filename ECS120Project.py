@@ -14,7 +14,7 @@ def ndFactor(inString, K):
     threads = []
     ndSoln = utils.NonDetSolution()
     
-    numList = numpy.array_split(range(2, numRt), K)
+    numList = numpy.array_split(range(2, numRt + 1), K)
     for L in numList:
         t = Thread(target = findFactor, args = (L, num, ndSoln))
         threads.append(t)
@@ -26,9 +26,13 @@ def findFactor(L, num, ndSoln):
     for i in L:
         if num % i == 0:
             ndSoln.setSolution(i)
-
+          
 def main():
-    number = input("Enter a positive integer: ")
+    while True:
+        number = float(input("Please a positive integer: "))
+        if number > 0 and number % 1 == 0:
+            break
+        
     K = int(input("How many groups do you want to split the numbers into? ")) 
     print("One of the factors of the number you entered is:", ndFactor(number, K))
 
