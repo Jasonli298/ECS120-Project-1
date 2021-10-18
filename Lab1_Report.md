@@ -79,7 +79,7 @@ The sum of all 3 elements in the data is 0x44555565, and it is stored one word a
         .word 1
         .word 0
 .text
-	la t0, a # Load the base address of a into t0
+    la t0, a # Load the base address of a into t0
     li s0, 0 # int b = 0
     li s1, 3 # Load the constant 3
     Loop:
